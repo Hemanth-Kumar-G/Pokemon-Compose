@@ -5,18 +5,18 @@ import com.google.gson.annotations.SerializedName
 
 data class PokemonList(
     @SerializedName("count")
-    var count: Int?,
+    var count: Int,
     @SerializedName("next")
-    var next: String?,
+    var next: String,
     @SerializedName("previous")
-    var previous: Any?,
+    var previous: Any,
     @SerializedName("results")
-    var results: List<Result?>?
+    var results: List<Result>
 )
 
 data class Result(
     @SerializedName("name")
-    var name: String?,
+    var name: String,
     @SerializedName("url")
-    var url: String?
+    var url: String
 )

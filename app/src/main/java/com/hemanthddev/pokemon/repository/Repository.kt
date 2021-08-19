@@ -6,7 +6,7 @@ import com.hemanthddev.pokemon.data.remote.response.PokemonList
 import com.hemanthddev.pokemon.util.Resource
 
 
-class Repository constructor(val api: ApiService) {
+class Repository constructor(private val api: ApiService) {
 
     suspend fun getPokemonList(limit: Int, offset: Int): Resource<PokemonList> {
         val data = try {

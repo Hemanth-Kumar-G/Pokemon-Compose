@@ -14,6 +14,7 @@ interface ApiService {
         @Query("offset") offset: Int
     ): PokemonList
 
+
     @GET("pokemon/{name}")
     suspend fun getPokemonInfo(@Path("name") name: String): PokemonInfo
 }
