@@ -20,8 +20,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import com.hemanthddev.pokemon.pokemonList.PokemonListScreen
 import com.hemanthddev.pokemon.ui.theme.PokemonTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +34,7 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = "pokemon_list_screen") {
 
                     composable("pokemon_list_screen") {
-                        Box(modifier = Modifier
-                            .fillMaxSize()
-                            .background(Color.Red))
+                        PokemonListScreen(navController = navController)
                     }
 
                     composable(
