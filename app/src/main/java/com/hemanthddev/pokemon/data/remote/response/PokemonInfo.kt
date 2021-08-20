@@ -13,7 +13,7 @@ data class PokemonInfo(
     @SerializedName("game_indices")
     var gameIndices: List<GameIndice?>?,
     @SerializedName("height")
-    var height: Int?,
+    var height: Int,
     @SerializedName("held_items")
     var heldItems: List<HeldItem?>?,
     @SerializedName("id")
@@ -35,11 +35,11 @@ data class PokemonInfo(
     @SerializedName("sprites")
     var sprites: Sprites?,
     @SerializedName("stats")
-    var stats: List<Stat?>?,
+    var stats: List<Stat>,
     @SerializedName("types")
-    var types: List<Type?>?,
+    var types: List<Type>,
     @SerializedName("weight")
-    var weight: Int?
+    var weight: Int
 ) {
     data class Ability(
         @SerializedName("ability")
@@ -499,31 +499,31 @@ data class PokemonInfo(
 
     data class Stat(
         @SerializedName("base_stat")
-        var baseStat: Int?,
+        var baseStat: Int,
         @SerializedName("effort")
-        var effort: Int?,
+        var effort: Int,
         @SerializedName("stat")
-        var stat: Stat?
+        var stat: Stat
     ) {
         data class Stat(
             @SerializedName("name")
-            var name: String?,
+            var name: String,
             @SerializedName("url")
-            var url: String?
+            var url: String
         )
     }
 
     data class Type(
         @SerializedName("slot")
-        var slot: Int?,
+        var slot: Int,
         @SerializedName("type")
-        var type: Type?
+        var type: Type
     ) {
         data class Type(
             @SerializedName("name")
-            var name: String?,
+            var name: String,
             @SerializedName("url")
-            var url: String?
+            var url: String
         )
     }
 }
